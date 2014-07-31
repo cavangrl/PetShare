@@ -18,8 +18,10 @@ gem 'unicorn'
 gem 'geokit-rails'
 gem 'geokit'
 gem 'geocoder'
+gem 'mandrill-api'
 # Use sqlite3 as the database for Active Record
 
+#gem 'debugger'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
