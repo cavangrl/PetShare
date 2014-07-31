@@ -1,6 +1,10 @@
 class DogsController < ApplicationController
   before_action :set_dog, only: [:show, :edit, :update, :destroy]
+  # geocoded_by :address
 
+  def address
+    [:state, :city, :zip_code].compact.join(', ')
+  end
   # GET /dogs
   # GET /dogs.json
   def index

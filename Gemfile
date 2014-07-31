@@ -15,6 +15,9 @@ gem 'cells'
 gem 'paperclip'
 gem 'bootstrap-sass'
 gem 'unicorn'
+gem 'geokit-rails'
+gem 'geokit'
+gem 'geocoder'
 # Use sqlite3 as the database for Active Record
 
 # Use SCSS for stylesheets

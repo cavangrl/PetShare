@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :dogs
   has_many :sitters
+  has_many :addresses
 
    def name
     [fname, lname].compact.join(' ')

@@ -5,9 +5,11 @@
   <%= image_tag @sitter.avatar.url %>
 </p>
 
+<p>
   <strong>First Name:</strong>
   <%= @sitter.fname %>
 </p>
+
 <p>
   <strong>Last Name:</strong>
   <%= @sitter.lname %>
@@ -42,6 +44,14 @@
   <strong>Solo care:</strong>
   <%= @sitter.solo_care %>
 </p>
+
+  <strong>Location:</strong>
+<p>
+    <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?key=AIzaSyB2GKvJbH_mzVNJvyaK3UhvdVY7U3gHE_Y
+  &q=NYCDA"></iframe>
+</p>
+
+
 
 <%= link_to 'Edit', edit_sitter_path(@sitter) %> |
 <%= link_to 'Back', sitters_path %>
