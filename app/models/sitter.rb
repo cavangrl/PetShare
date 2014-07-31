@@ -8,5 +8,12 @@ class Sitter < ActiveRecord::Base
   has_many :dogs
   has_many :addresses, through: :locations
   belongs_to :user
+
+  scope :insured, -> {where(insurance: true)}
+  scope :full, -> {where(full_time: true)} 
+  scope :solo, -> {where(solo_care: true)} 
+  scope :medical, -> {where(medical_status: true)} 
+  scope :doggie, -> {where(doggie_cam: true)}  
+  scope :years, -> {where('years_of_experience <5')} 
 # end
 end
