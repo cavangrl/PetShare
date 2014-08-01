@@ -7,17 +7,24 @@ class User < ActiveRecord::Base
    has_many :sitters
    has_many :addresses
    has_many :contact_forms
- 
+  after_create :send_welcome_mail
+
    def name
-     [fname, lname].compact.join(' ')
-   end
- 
-  def update_with_password(params, *options)
-     if super
-       puts "Environment: #{Rails.env.development?}"
-       # debugger
-       # TODO schedule this in the background
-       UserMailer.password_changed(self.id).deliver
-     end
+    [fname, lname].compact.join(' ')
   end
+
+    def send_welcome_mail
+      UserMailer.welcome_email(self).deliver
+    end
+
+   def update_with_password(params, *options)
+    if super
+      # puts "Environment: #{Rails.env.development?}"
+      # debugger
+      # TODO schedule this in the background
+      UserMailer.password_changed(self.id).deliver
+    end
+end
+ 
+ 
 end

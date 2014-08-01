@@ -1,3 +1,4 @@
+<div class="authform">
 <%= form_for(@sitter, :html => { :multipart => true }) do |f| %>
   <% if @sitter.errors.any? %>
     <div id="error_explanation">
@@ -16,41 +17,42 @@
   <div>
   <div class="field">
     <%= f.label :first_name %><br>
-    <%= f.text_field :first_name, :value => "#{current_user.first_name}" %>
+    <%= f.text_field :first_name, :value => "#{current_user.first_name}", class: 'form-control' %>
   </div>
     <div class="field">
     <%= f.label :last_name %><br>
-    <%= f.text_field :last_name, :value => "#{current_user.last_name}" %>
+    <%= f.text_field :last_name, :value => "#{current_user.last_name}", class: 'form-control' %>
   </div>
   <div class="field">
     <%= f.label :summary %><br>
-    <%= f.text_area :summary %>
+    <%= f.text_area :summary, class: 'form-control' %>
   </div>
   <div class="field">
     <%= f.label :years_of_experience %><br>
-    <%= f.number_field :years_of_experience %>
+    <%= f.number_field :years_of_experience , class: 'form-control'%>
   </div>
   <div class="field">
     <%= f.label :zip %><br>
-    <%= f.number_field :zip %>
+    <%= f.number_field :zip, class: 'form-control' %>
   </div>
   <div class="field">
     <%= f.label :insurance %><br>
-    <%= f.check_box :insurance %>
+    <%= f.check_box :insurance, class: 'form-control'%>
   </div>
   <div class="field">
     <%= f.label :full_time %><br>
-    <%= f.check_box :full_time %>
+    <%= f.check_box :full_time, class: 'form-control' %>
   </div>
   <div class="field">
     <%= f.label :doggie_cam %><br>
-    <%= f.check_box :doggie_cam %>
+    <%= f.check_box :doggie_cam , class: 'form-control'%>
   </div>
   <div class="field">
     <%= f.label :solo_care %><br>
-    <%= f.check_box :solo_care %>
+    <%= f.check_box :solo_care, class: 'form-control' %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class => 'button right' %>
   </div>
 <% end %>
+</div>
