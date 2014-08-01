@@ -1,3 +1,4 @@
+<div style="padding: 0px 0px 0px 500px">
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -7,15 +8,15 @@
 
 <p>
   <strong>First Name:</strong>
-  <%= @sitter.fname %>
+  <%= @sitter.first_name %>
 </p>
 
 <p>
   <strong>Last Name:</strong>
-  <%= @sitter.lname %>
+  <%= @sitter.last_name %>
 </p>
 <p>
-  <strong>Zipcode:</strong>
+  <strong>Zip code:</strong>
   <%= @sitter.zip %>
 </p>
 <p>
@@ -54,10 +55,11 @@
 
   <strong>Location:</strong>
 <p>
-    <iframe width="300" height="150" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?key=AIzaSyB2GKvJbH_mzVNJvyaK3UhvdVY7U3gHE_Y&q=NYCDA"></iframe>
+    <iframe width="300" height="150" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?key=GOOGLE_MAPS_API&q=NYCDA"></iframe>
 </p>
 
 
 
 <%= link_to 'Edit', edit_sitter_path(@sitter) %> |
 <%= link_to 'Back', sitters_path %>
+</div>

@@ -11,12 +11,7 @@
       </button>
           <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav pull-left">
-      <li><%= link_to site_name, site_url, :class => "navbar-brand" %></li>
-<% if user_signed_in? %>
-         <li>Hello <%= current_user.fname %></li>
-         <% else %>
-         <li></li>
-         <% end %>
+      <li><%= link_to "PetShar", root_path, :class => "navbar-brand" %></li>
       </ul>
       </div>
  </div>

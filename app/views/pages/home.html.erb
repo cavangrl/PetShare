@@ -1,15 +1,13 @@
-</br>
-</br>
-</br>
-</br>
 
-<%= link_to "My Profile", user_path%>
+
 </br>
-
-<% if current_user %>
-<%= link_to "Find all of the DogSitters based on my criteria", sitters_path%><br />
-<% end %>
-
+<div style="padding: 0px 0px 0px 350px;font-size:2em">
+    <% if current_user %>
+    <%= link_to "My Profile", users_path%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= link_to "Find all Sitters", sitters_path%><br />
+    <% end %>
+</div><br><br>
 <%= render 'layouts/wow' %>
 
 

@@ -10,19 +10,17 @@
       </ul>
     </div>
   <% end %>
-  
+  <div>
+  <%= f.label :pic %><br>
   <%= f.file_field :avatar %>
+  <div>
   <div class="field">
     <%= f.label :first_name %><br>
-    <%= f.text_field :fname, :value => "#{current_user.fname}" %>
+    <%= f.text_field :first_name, :value => "#{current_user.first_name}" %>
   </div>
     <div class="field">
     <%= f.label :last_name %><br>
-    <%= f.text_field :lname, :value => "#{current_user.lname}" %>
-  </div>
-   <div class="field">
-    <%= f.label :Zipcode %><br>
-    <%= f.number_field :zip %>
+    <%= f.text_field :last_name, :value => "#{current_user.last_name}" %>
   </div>
   <div class="field">
     <%= f.label :summary %><br>
@@ -31,6 +29,10 @@
   <div class="field">
     <%= f.label :years_of_experience %><br>
     <%= f.number_field :years_of_experience %>
+  </div>
+  <div class="field">
+    <%= f.label :zip %><br>
+    <%= f.number_field :zip %>
   </div>
   <div class="field">
     <%= f.label :insurance %><br>
@@ -47,10 +49,6 @@
   <div class="field">
     <%= f.label :solo_care %><br>
     <%= f.check_box :solo_care %>
-  </div>
-    <div class="field">
-    <%= f.label :medical_status%><br>
-    <%= f.check_box :medical_status%>
   </div>
   <div class="actions">
     <%= f.submit %>

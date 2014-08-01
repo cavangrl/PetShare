@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
 
-
-
   get '/about'    => 'high_voltage/pages#show', id: 'about'
   get '/contact'  => 'high_voltage/pages#show', id: 'contact'
   get '/privacy'  => 'high_voltage/pages#show', id: 'privacy'
   get '/terms'    => 'high_voltage/pages#show', id: 'terms'
+  
+  
+  # match '/contact',     to: 'contact_forms#new',             via: 'get'
+  # resources "contacts", only: [:new, :create]
+  
+  # get '/contact'  => 'contact_forms#new'
 
   # get '/home', to: redirect('/')
 
@@ -18,6 +22,8 @@ Rails.application.routes.draw do
   resources :users do
   resources :dogs
 end
+
+  resources :contact_forms
 # 
   #root to: "users#index"
 

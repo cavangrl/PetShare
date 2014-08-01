@@ -17,19 +17,15 @@ config.action_mailer.default :charset => "utf-8"
     password:             ENV['GMAIL_PASSWORD'],
     authentication:       'plain',
     enable_starttls_auto: true  }
-
-    
-
-
->>>>>>> a1b1c989601b6938234d766242153505defd253e
+  
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
   # config.cache_classes = false
 
   # # Do not eager load code on boot.
-  # config.eager_load = false
-
+  config.eager_load = false
+  
   # # Show full error reports and disable caching.
   # config.consider_all_requests_local       = true
   # config.action_controller.perform_caching = false

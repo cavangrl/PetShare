@@ -3,21 +3,39 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
+
 gem 'devise'
+
 gem 'high_voltage', '~> 2.2.1'
+
 gem "gritter", "1.1.0"
+
+gem 'mail_form'
+
 gem 'simple_form'
+
 gem 'friendly_id'
+
 gem 'kaminari'
+
 gem "cancan"
+
 gem "letter_opener", :group => :development
+
 gem 'cells'
+
 gem 'paperclip'
+
 gem 'bootstrap-sass'
+
 gem 'unicorn'
+
 gem 'geokit-rails'
+
 gem 'geokit'
+
 gem 'geocoder'
+
 gem 'mandrill-api'
 # Use sqlite3 as the database for Active Record
 
@@ -36,6 +54,8 @@ gem 'jquery-rails'
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
+
+gem "actionpack", "~> 4.1.4"
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
