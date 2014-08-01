@@ -1,28 +1,31 @@
+<div class="jumbotron">
 
-<div style="padding: 0px 0px 0px 350px;font-size:2em">
+<div class="homeHeader">
+<div style="padding: 20px 0px 0px 350px;font-size:2em">
     <% if current_user %>
-    <%= link_to "My Profile", users_path%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= link_to "My Profile", user_path(current_user.id)%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <%= link_to "Find all Sitters", sitters_path%><br />
+    <% else%>
+	<%= "Welcome to Pet Project" %>
     <% end %>
-</div><br><br>
-<%= render 'layouts/wow' %>
-
-
-
-<h1>HELLO</h1>
-
-
-<% if current_user %>
-<%= link_to 'My Account', user_path(current_user.id) %>
-<% else%>
-<%= "Welcome to Pet Project" %>
-<% end %>
-
+   
+<div class="petSitter">
 <% if current_user %>
 	<% if current_user.sitters.any? %>
 	<%= link_to 'My Sitter Account', sitter_path(current_user.sitters.last.id) %>
 	<% else %>
 	<%= link_to 'Want to become a pet sitter?', new_sitter_path %>
 	<% end %>
-<% end %>	
+<% end %>
+</div>
+</div><br><br></div>
+<%= render 'layouts/wow' %>
+</div>
+
+
+
+
+
+
+	

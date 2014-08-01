@@ -3,6 +3,25 @@
 @import "cerulean";
 
 
+.petSitter{
+padding-top: 20px;
+}
+
+.userShow, #dogIndex, #userIndex, #dogShow{
+	text-align: center;
+}
+
+#dogList{
+
+	padding-left: 450px;
+}
+
+#sitterIndex{
+	padding-left:50px;
+	padding-right:50px;
+}
+
+
 // main {
 //   @extend .container;
 
