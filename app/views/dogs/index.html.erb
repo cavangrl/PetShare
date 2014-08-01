@@ -1,6 +1,8 @@
-<h1>Listing dogs</h1>
+<div id="dogIndex">
 
-<table>
+<h1>Listing dogs</h1>
+<div id="dogList">
+<table class="table table-hover">
   <thead>
     <tr>
       <th>Breed</th>
@@ -21,7 +23,9 @@
     <% end %>
   </tbody>
 </table>
-
+</div>
 <%= link_to 'My Account', user_path(current_user.id) %></br>
 
 <%= link_to 'New Dog', new_user_dog_path %>
+
+</div>
