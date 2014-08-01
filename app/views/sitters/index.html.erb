@@ -23,11 +23,9 @@
   <tbody>
     <% @sitters.each do |sitter| %>
       <tr>
-       <td><%= sitter.first_name %></td>
+      
+       <td><%= link_to "#{sitter.first_name}", sitter %></td>
         <td><%= sitter.last_name %></td>
-        <td><%= image_tag sitter.avatar.url%></td>
-       <td><%= link_to "#{sitter.fname}", sitter %></td>
-        <td><%= sitter.lname %></td>
    <td><%= image_tag sitter.avatar.url(:thumb)%></td>
         <td><%= sitter.summary %></td>
         <td><%= sitter.years_of_experience %></td>
@@ -37,12 +35,7 @@
         <td><%= sitter.solo_care %></td>
         <td><%= sitter.zip %></td>
         <td><%= sitter.medical_status %></td>
-        <!-- <td><%= link_to 'Edit', edit_sitter_path(sitter) %></td> -->
-    <!--     <td><%= link_to 'Destroy', sitter, method: :delete, data: { confirm: 'Are you sure?' } %></td> --> -->
       </tr>
-      <%= link_to 'Edit', edit_sitter_path(sitter) %>&nbsp
-        <%= link_to 'Destroy', sitter, method: :delete, data: { confirm: 'Are you sure?' } %>&nbsp;&nbsp;&nbsp;&nbsp;
-    <%= link_to "#{sitter.first_name}'s profile", sitter %><br><br>
     <% end %>
   </tbody>
 </table>
