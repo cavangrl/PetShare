@@ -15,7 +15,7 @@
       <tr>
         <td><%= "Breed:#{ dog.breed}   "%></td>
         <td><%= "Age: #{dog.age}    " %></td>
-        <td><%= image_tag dog.avatar.url%></td>
+        <td><%= image_tag dog.avatar.url(:thumb)%></td>
         <td><%= link_to 'Find A Sitter', user_dog_path(dog.user, dog.id) %></td>
       </tr>
     <% end %>
